@@ -1,9 +1,14 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 import redis.asyncio as redis
 import asyncio
+import os
 
 app = FastAPI()
-r = redis.Redis(host='localhost', port=6379, decode_responses=True)
+
+REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
+REDIS_PORT = os.getenv('REDIS_PORT', '6379')
+
+r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, decode_responses=True)
 
 active_connections = {}
 waiting_connections = {}
@@ -22,6 +27,13 @@ async def listen_to_redis(room_id: str):
     except asyncio.CancelledError:
         await pubsub.unsubscribe(room_id)
         raise
+
+@app.get("/api/check-room")
+async def check_room(room_id: str):
+    if room_id in active_connections and len(active_connections[room_id]) > 0:
+        return {"active": True}
+    return {"active": False}
+
 
 @app.websocket("/ws/waiting/{room_id}")
 async def waiting_websocket(websocket: WebSocket, room_id: str):
