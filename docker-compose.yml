@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+  
+  frontend:
+    build: ./frontend/chat-frontend
+    ports:
+      - "3000:3000"
+  
+  redis:
+    image: redis:latest
+    ports:
+      - "6380:6379"
+
