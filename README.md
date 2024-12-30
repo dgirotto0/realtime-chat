@@ -140,7 +140,7 @@ The CI/CD pipeline is configured in `.github/workflows/ci-cd.yaml` to:
 ## 🖼️ Screenshots
 <div align="center">
   <h3>🔑 Welcome Screen</h3>
-  <img src="./screenshots/welcome-screen.png" alt="Welcome Screen" width="700px" style="border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+  <img src="./screenshots/welcome.png" alt="Welcome Screen" width="700px" style="border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
   
   <h3>⏳ Waiting Room</h3>
   <img src="./screenshots/waiting-room.png" alt="Waiting Room" width="700px" style="border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
