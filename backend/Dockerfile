@@ -3,6 +3,9 @@
 # Imagem base: Python
 FROM python:3.10-slim
 
+# Opção para evitar buffering no Docker (logs em tempo real)
+ENV PYTHONUNBUFFERED=1
+
 # Criamos um diretório de trabalho
 WORKDIR /app
 
@@ -16,5 +19,9 @@ COPY . /app
 # Expondo a porta que o FastAPI escuta (por exemplo 8000)
 EXPOSE 8000
 
-# Comando para rodar (usando uvicorn, por exemplo)
+# (Opcional) Label para versão
+LABEL maintainer="Seu Nome <seuemail@example.com>"
+LABEL version="1.0"
+
+# Comando para rodar com uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

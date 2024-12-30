@@ -10,8 +10,8 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME_BACKEND: dgirotto0/realtime-chat-backend
-  IMAGE_NAME_FRONTEND: dgirotto0/realtime-chat-frontend
+  IMAGE_NAME_BACKEND: dvgirotto/my-anonymous-chat-backend
+  IMAGE_NAME_FRONTEND: dvgirotto/my-anonymous-chat-frontend
 
 jobs:
   build-and-push-backend:
