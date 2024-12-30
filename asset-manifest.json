@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dgirotto0/realtime-chat/static/css/main.38201997.css",
+    "main.js": "/dgirotto0/realtime-chat/static/js/main.38666ec4.js",
+    "static/js/453.f26e8ecf.chunk.js": "/dgirotto0/realtime-chat/static/js/453.f26e8ecf.chunk.js",
+    "index.html": "/dgirotto0/realtime-chat/index.html",
+    "main.38201997.css.map": "/dgirotto0/realtime-chat/static/css/main.38201997.css.map",
+    "main.38666ec4.js.map": "/dgirotto0/realtime-chat/static/js/main.38666ec4.js.map",
+    "453.f26e8ecf.chunk.js.map": "/dgirotto0/realtime-chat/static/js/453.f26e8ecf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38201997.css",
+    "static/js/main.38666ec4.js"
+  ]
+}
